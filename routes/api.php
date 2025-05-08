@@ -4,6 +4,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\LedStateController;
+
+
+### LED
+
+Route::get('/led-state', [LedStateController::class, 'show']); // For ESP32
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
